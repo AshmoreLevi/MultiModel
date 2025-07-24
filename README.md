@@ -1,5 +1,10 @@
 # MultiModel - 多模态机器学习项目
 
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-Optimized-silver.svg)](https://developer.apple.com/documentation/apple-silicon)
+
 一个强大的多模态机器学习框架，支持文本、图像、音频等多种数据模态的处理、特征提取和融合。
 
 ## 🚀 项目特性
