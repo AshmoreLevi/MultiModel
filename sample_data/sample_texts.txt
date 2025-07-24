@@ -1,0 +1,3 @@
+Text 1: 这是第一个示例文本，包含中文内容。
+Text 2: This is the second sample text in English.
+Text 3: 第三个文本混合了中文和English content。

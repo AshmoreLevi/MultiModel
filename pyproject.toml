@@ -1,0 +1,110 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multimodel"
+version = "0.1.0"
+description = "一个强大的多模态机器学习项目"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "torchaudio>=2.0.0",
+    "transformers>=4.30.0",
+    "Pillow>=9.5.0",
+    "opencv-python>=4.8.0",
+    "scikit-image>=0.21.0",
+    "librosa>=0.10.0",
+    "soundfile>=0.12.0",
+    "audioread>=3.0.0",
+    "nltk>=3.8",
+    "spacy>=3.6.0",
+    "jieba>=0.42.1",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.3.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "plotly>=5.15.0",
+    "tqdm>=4.65.0",
+    "pyyaml>=6.0",
+    "click>=8.1.0",
+    "rich>=13.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.7.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+    "jupyter>=1.0.0",
+    "ipywidgets>=8.0.0",
+]
+
+[project.scripts]
+multimodel = "multimodel.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/multimodel"
+Repository = "https://github.com/yourusername/multimodel"
+Issues = "https://github.com/yourusername/multimodel/issues"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.8"
+# 忽略缺少类型stubs的第三方库
+ignore_missing_imports = true
+# 允许未类型化的定义
+disallow_untyped_defs = false
+# 允许未完整的类型
+allow_incomplete_defs = true
+# 警告级别设置
+warn_return_any = false
+warn_unused_configs = false
+warn_unused_ignores = false
+
+# 跳过分析特定模块
+[[tool.mypy.overrides]]
+module = [
+    "jieba.*",
+    "librosa.*", 
+    "soundfile.*",
+    "cv2.*",
+    "sklearn.*",
+    "scipy.*",
+    "torchvision.*"
+]
+ignore_errors = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"

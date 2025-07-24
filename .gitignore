@@ -1,0 +1,126 @@
+# 字节码文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 分发/打包
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# 单元测试 / 覆盖率报告
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# 环境
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder项目设置
+.spyderproject
+.spyproject
+
+# Rope项目设置
+.ropeproject
+
+# mkdocs文档
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# 模型文件和数据
+*.pth
+*.pt
+*.ckpt
+*.h5
+models/
+data/
+datasets/
+!examples/sample_data/
+
+# 日志文件
+*.log
+logs/
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# 个人配置文件
+config.yaml
+config.json
+*.local
+
+# 大文件
+*.mp4
+*.avi
+*.wav
+*.mp3
+*.flac
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+
+# 但保留示例文件
+!examples/**/*.jpg
+!examples/**/*.png
+!examples/**/*.wav
+!examples/**/*.mp3
